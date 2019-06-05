@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LegatoProject:LegatoSystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:LegatoProject="http://legatoProject.ecore" etpID="[Built-in] Legato for WP76 R12 (18.10.3.wp76xx-docker-201903041325) - WP76XX">
+  <configurations mbsConfigId="legato.core.af.projectType.system.release.1502562457" sdefFileName="${ProjName}.sdef"/>
+  <configurations mbsConfigId="legato.core.af.projectType.system.debug.1937281958" sdefFileName="${ProjName}.sdef"/>
+</LegatoProject:LegatoSystemProject>

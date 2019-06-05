@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="legato.core.af.projectType.system.release.1502562457">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="legato.core.af.projectType.system.release.1502562457" moduleId="org.eclipse.cdt.core.settings" name="Target_Legato_Release">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.swi.ebs.legato.core.MkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.swi.ebs.legato.core.CrossGCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="${DsLegatoModuleType}.update" artifactName="${DsLegatoSdefFile}" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.release,com.wavecom.openat.ide.buildArtefactType=com.wavecom.openat.ide.ebs.core.systemproject" description="" id="legato.core.af.projectType.system.release.1502562457" name="Target_Legato_Release" parent="legato.core.af.projectType.system.release">
+					<folderInfo id="legato.core.af.projectType.system.release.1502562457." name="/" resourcePath="">
+						<toolChain id="legato.core.af.projectType.system.release.toolchain.1807470360" name="Legato Application Framework GCC" superClass="legato.core.af.projectType.system.release.toolchain">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="legato.targetPlatform.gnu.cross.481899517" isAbstract="false" osList="all" superClass="legato.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/homehub-regulation-test}/Target_Legato_Release" id="com.swi.ebs.legato.core.builder.af.1007930587" keepEnvironmentInBuildfile="false" name="[Sierra Wireless] Legato Application Framework Builder" superClass="com.swi.ebs.legato.core.builder.af"/>
+							<tool id="com.swi.ebs.legato.core.tool.mkapp.376652702" name="mkapp Tool" superClass="com.swi.ebs.legato.core.tool.mkapp"/>
+							<tool id="com.swi.ebs.legato.core.tool.mkcomp.110812408" name="mkcomp Tool" superClass="com.swi.ebs.legato.core.tool.mkcomp"/>
+							<tool id="com.swi.ebs.legato.core.tool.mksys.2037318900" name="mksys Tool" superClass="com.swi.ebs.legato.core.tool.mksys">
+								<inputType id="com.swi.ebs.legato.core.inputType.mksys.c.426687602" superClass="com.swi.ebs.legato.core.inputType.mksys.c"/>
+								<inputType id="com.swi.ebs.legato.core.inputType.mksys.cpp.330904606" superClass="com.swi.ebs.legato.core.inputType.mksys.cpp"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="com.wavecom.openat.ide.ebs.build.core.settingsprovider" factoryId="org.eclipse.cdt.core.extension.container.factory"/>
+			</storageModule>
+		</cconfiguration>
+		<cconfiguration id="legato.core.af.projectType.system.debug.1937281958">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="legato.core.af.projectType.system.debug.1937281958" moduleId="org.eclipse.cdt.core.settings" name="Target_Legato_Debug">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.swi.ebs.legato.core.MkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.swi.ebs.legato.core.CrossGCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactName="${DsLegatoSdefFile}" buildProperties="org.eclipse.cdt.build.core.buildType=org.eclipse.cdt.build.core.buildType.debug,com.wavecom.openat.ide.buildArtefactType=com.wavecom.openat.ide.ebs.core.systemproject" description="" id="legato.core.af.projectType.system.debug.1937281958" name="Target_Legato_Debug" parent="legato.core.af.projectType.system.debug">
+					<folderInfo id="legato.core.af.projectType.system.debug.1937281958." name="/" resourcePath="">
+						<toolChain id="legato.core.af.projectType.system.debug.toolchain.156605838" name="Legato Application Framework GCC" superClass="legato.core.af.projectType.system.debug.toolchain">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="legato.targetPlatform.gnu.cross.1995686881" isAbstract="false" osList="all" superClass="legato.targetPlatform.gnu.cross"/>
+							<builder buildPath="${workspace_loc:/homehub-regulation-test}/Target_Legato_Debug" id="com.swi.ebs.legato.core.builder.af.1409023702" keepEnvironmentInBuildfile="false" name="[Sierra Wireless] Legato Application Framework Builder" superClass="com.swi.ebs.legato.core.builder.af"/>
+							<tool id="com.swi.ebs.legato.core.tool.mkapp.653150066" name="mkapp Tool" superClass="com.swi.ebs.legato.core.tool.mkapp"/>
+							<tool id="com.swi.ebs.legato.core.tool.mkcomp.275823761" name="mkcomp Tool" superClass="com.swi.ebs.legato.core.tool.mkcomp"/>
+							<tool id="com.swi.ebs.legato.core.tool.mksys.577772028" name="mksys Tool" superClass="com.swi.ebs.legato.core.tool.mksys">
+								<inputType id="com.swi.ebs.legato.core.inputType.mksys.c.1025917545" superClass="com.swi.ebs.legato.core.inputType.mksys.c"/>
+								<inputType id="com.swi.ebs.legato.core.inputType.mksys.cpp.721770492" superClass="com.swi.ebs.legato.core.inputType.mksys.cpp"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings">
+				<externalSettings containerId="com.wavecom.openat.ide.ebs.build.core.settingsprovider" factoryId="org.eclipse.cdt.core.extension.container.factory"/>
+			</storageModule>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="homehub-regulation-test.legato.core.af.projectType.system.762878703" name="" projectType="legato.core.af.projectType.system"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+</cproject>

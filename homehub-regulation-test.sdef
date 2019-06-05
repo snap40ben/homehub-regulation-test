@@ -1,0 +1,5 @@
+// Basic system, integrating essential modem and positioning services
+#include "$LEGATO_ROOT/default.sdef"
+
+apps: {
+}
