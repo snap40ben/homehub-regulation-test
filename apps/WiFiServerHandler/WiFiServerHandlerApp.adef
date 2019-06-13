@@ -1,0 +1,23 @@
+version: $HOMEHUB_FW_VERSION
+
+sandboxed: false
+
+executables:
+{
+    WiFiServerHandler = ( WiFiServerHandlerComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (WiFiServerHandler)
+    }
+    
+    faultAction: restart
+}

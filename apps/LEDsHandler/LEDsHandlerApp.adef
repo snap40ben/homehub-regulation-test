@@ -1,0 +1,28 @@
+version: $HOMEHUB_FW_VERSION
+
+sandboxed: false
+
+executables:
+{
+    LEDsHandler = ( LEDsHandlerComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (LEDsHandler)
+    }
+    
+    faultAction: restart
+}
+
+extern:
+{
+    LEDsHandler = LEDsHandler.LEDsHandlerComponent.LEDsHandler
+}

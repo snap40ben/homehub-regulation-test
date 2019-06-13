@@ -1,0 +1,15 @@
+provides:
+{
+    api:
+    {
+        LEDsHandler = LEDsHandler.api
+    }
+}
+
+sources:
+{
+    LEDsHandler.cpp // COMPONENT_INIT
+    
+    $SOURCE_PATH/LEDs/LP55231.cpp   
+    $SOURCE_PATH/LEDs/LEDController.cpp 
+}

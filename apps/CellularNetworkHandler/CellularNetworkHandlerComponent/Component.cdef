@@ -1,0 +1,29 @@
+requires:
+{
+    api:
+    {
+        LEDsHandler = LEDsHandler.api
+    }
+}
+
+
+sources:
+{
+    CellularNetworkHandler.cpp // COMPONENT_INIT
+    $SOURCE_PATH/CellularNetwork/CellularNetwork.cpp  
+}
+
+requires:
+{
+    api:
+    {
+        ${LEGATO_ROOT}/interfaces/modemServices/le_mdc.api
+        ${LEGATO_ROOT}/interfaces/modemServices/le_mrc.api
+        ${LEGATO_ROOT}/interfaces/atServices/le_atClient.api
+    }
+}
+
+ldflags:
+{
+    -lcurl
+}

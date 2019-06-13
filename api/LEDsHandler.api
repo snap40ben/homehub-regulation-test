@@ -1,0 +1,30 @@
+/*!
+ * @brief Define a command to be applied to an RGB LED.
+ *
+ * @param[in] ledStr    LED to be controlled. The folling values are supported:
+ *                          - "RGB_D1"
+ *                          - "RGB_D2"
+ *                          - "RGB_D3"
+ *
+ * @param[in] cmdStr    Command to apply to the LED.
+ *                      The folling values are supported:
+ *                          - "On"
+ *                          - "Off"
+ *                          - "Blink"
+ *
+ * @param[in] red       Red value of the RGB LED.
+ *
+ * @param[in] green     Green value of the RGB LED.
+ *
+ * @param[in] blue      Blue value of the RGB LED.
+ *
+ * @return None
+ * */
+FUNCTION setLedCommand
+(
+    string ledStr[10] IN,
+    string cmdStr[10] IN,
+    uint8 red IN,
+    uint8 green IN,
+    uint8 blue IN
+);

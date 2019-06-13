@@ -1,0 +1,14 @@
+sources:
+{
+    WiFiApHandler.cpp // COMPONENT_INIT
+    $SOURCE_PATH/WiFi/WiFiAccessPoint.cpp   
+    $SOURCE_PATH/Utils/SystemUtils.cpp
+}
+
+requires:
+{
+    api:
+    {
+        ${LEGATO_ROOT}/interfaces/wifi/le_wifiAp.api
+    }
+}

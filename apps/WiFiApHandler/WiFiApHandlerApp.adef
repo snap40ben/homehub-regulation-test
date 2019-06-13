@@ -1,0 +1,28 @@
+version: $HOMEHUB_FW_VERSION
+
+sandboxed: false
+
+executables:
+{
+    WiFiApHandler = ( WiFiApHandlerComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (WiFiApHandler)
+    }
+    
+    faultAction: restart
+}
+
+bindings:
+{
+    WiFiApHandler.WiFiApHandlerComponent.le_wifiAp -> wifiService.le_wifiAp
+}
