@@ -1,0 +1,6 @@
+sources:
+{
+    EthServerHandler.cpp // COMPONENT_INIT
+    $SOURCE_PATH/Com/WearableDeviceCom.cpp   
+    $SOURCE_PATH/Utils/SystemUtils.cpp
+}

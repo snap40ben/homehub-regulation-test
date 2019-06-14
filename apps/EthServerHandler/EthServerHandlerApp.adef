@@ -1,0 +1,23 @@
+version: $HOMEHUB_FW_VERSION
+
+sandboxed: false
+
+executables:
+{
+    EthServerHandler = ( EthServerHandlerComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (EthServerHandler)
+    }
+    
+    faultAction: restart
+}

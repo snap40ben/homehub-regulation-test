@@ -25,7 +25,7 @@ COMPONENT_INIT
 {
     while (1)
     {
-        WearableDeviceCom server(443, INADDR_ANY, "wlan0");
+        WearableDeviceCom server(444, INADDR_ANY, "eth0");
 
         while(1)
         {

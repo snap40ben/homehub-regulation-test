@@ -21,8 +21,7 @@ using namespace WearableDeviceALPConstants;
  * and launch it. A call to open() will then allow to receive the next
  * device connection.
  * */
-WearableDeviceCom::WearableDeviceCom(int port, in_addr_t addr/*,
-        std::string device*/) : opt(1), addrlen(sizeof(address))
+WearableDeviceCom::WearableDeviceCom (int port, in_addr_t addr, std::string device) : opt(1), addrlen(sizeof(address)), serverStatus(true)
 {
     struct timeval alpTimeout;
     alpTimeout.tv_sec = ALP_COMMUNICATION_TIMEOUT_SEC;
@@ -62,12 +61,12 @@ WearableDeviceCom::WearableDeviceCom(int port, in_addr_t addr/*,
             LE_ERROR("setsockopt failure");
             serverStatus = false;
         }
-        /*else if (setsockopt(server_fd, SOL_SOCKET, SO_BINDTODEVICE,
+        else if (setsockopt(server_fd, SOL_SOCKET, SO_BINDTODEVICE,
                             device.c_str(), device.length()))
         {
             LE_ERROR("setsockopt failure on SO_BINDTODEVICE");
             serverStatus = false;
-        }*/
+        }
     }
 
     if (serverStatus)

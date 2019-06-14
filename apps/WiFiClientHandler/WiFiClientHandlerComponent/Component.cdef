@@ -1,0 +1,12 @@
+sources:
+{
+    WiFiClientHandler.cpp // COMPONENT_INIT
+}
+
+requires:
+{
+    api:
+    {
+        ${LEGATO_ROOT}/interfaces/wifi/le_wifiClient.api
+    }
+}

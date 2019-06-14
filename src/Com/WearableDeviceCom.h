@@ -15,7 +15,7 @@
 class WearableDeviceCom
 {
     public:
-        WearableDeviceCom(int port, in_addr_t addr/*, std::string device*/);
+        WearableDeviceCom(int port, in_addr_t addr, std::string device);
         ~WearableDeviceCom(void);
         bool open(void);
         bool read(uint8_t* buf, uint32_t len);
