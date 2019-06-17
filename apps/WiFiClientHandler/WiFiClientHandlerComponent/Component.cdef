@@ -1,6 +1,7 @@
 sources:
 {
     WiFiClientHandler.cpp // COMPONENT_INIT
+    $SOURCE_PATH/Utils/SystemUtils.cpp
 }
 
 requires:

@@ -10,6 +10,7 @@
 #include "Com/WearableDeviceCom.h"
 #include <vector>
 #include <arpa/inet.h>
+#include "Utils/SystemUtils.h"
 
 
 #define TEST_PING_PAYLOAD_START     (0xBE)
@@ -25,7 +26,7 @@ COMPONENT_INIT
 {
     while (1)
     {
-        WearableDeviceCom server(443, INADDR_ANY, "wlan0");
+        WearableDeviceCom server(55556, INADDR_ANY, "wlan0");
 
         while(1)
         {

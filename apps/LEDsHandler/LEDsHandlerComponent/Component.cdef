@@ -11,5 +11,6 @@ sources:
     LEDsHandler.cpp // COMPONENT_INIT
     
     $SOURCE_PATH/LEDs/LP55231.cpp   
-    $SOURCE_PATH/LEDs/LEDController.cpp 
+    $SOURCE_PATH/LEDs/LEDController.cpp
+    $SOURCE_PATH/Utils/SystemUtils.cpp  
 }

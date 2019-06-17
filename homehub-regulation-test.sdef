@@ -32,7 +32,7 @@ interfaceSearch:
 
 buildVars:
 {
-    BUILD_NUMBER = 6
+    BUILD_NUMBER = 7
     HOMEHUB_FW_VERSION = 0.1.0.$BUILD_NUMBER
     SOURCE_PATH = $CURDIR/src
     LIB_PATH = $CURDIR/lib

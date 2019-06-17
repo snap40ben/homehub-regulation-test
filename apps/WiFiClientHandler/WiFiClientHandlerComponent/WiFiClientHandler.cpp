@@ -8,12 +8,13 @@
 #include "legato.h"
 #include "interfaces.h"
 #include <iostream>
+#include "Utils/SystemUtils.h"
 
 static void MyHandleScanResult(void);
 static void EventHandler(le_wifiClient_Event_t clientEvent, void *contextPtr);
 
-static std::string wifiSSID = "WKvhnYz82BA3yTft";
-static std::string wifiPSK  = "%v6eK3VTZ9DiBX=T";
+static std::string wifiSSID = "HomeHubEmcTest";
+static std::string wifiPSK  = "Snap40Snap40";
 le_wifiClient_NewEventHandlerRef_t wifiHandler = NULL;
 static const uint8_t ssidMaxSize = 64;
 
@@ -57,19 +58,22 @@ static void EventHandler(le_wifiClient_Event_t clientEvent, void *contextPtr)
          case LE_WIFICLIENT_EVENT_CONNECTED:
          {
              LE_INFO("WiFi Client Connected.");
+             break;
          }
-         break;
+
          case LE_WIFICLIENT_EVENT_DISCONNECTED:
          {
              LE_INFO("WiFi Client Disconnected.");
+             LE_INFO("Start scan [%d]", le_wifiClient_Scan());
+             break;
          }
-         break;
+
          case LE_WIFICLIENT_EVENT_SCAN_DONE:
          {
              LE_INFO("WiFi Client Scan is done.");
              MyHandleScanResult();
+             break;
          }
-         break;
 
          default:
              break;
@@ -81,6 +85,8 @@ static void EventHandler(le_wifiClient_Event_t clientEvent, void *contextPtr)
  * */
 COMPONENT_INIT
 {
+    SystemUtils::RunSystemCommand("/etc/init.d/tiwifi stop");
+
     while (1)
     {
         le_result_t result = le_wifiClient_Start();

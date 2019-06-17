@@ -8,6 +8,7 @@
 #include "legato.h"
 #include "interfaces.h"
 #include "LEDs/LEDController.h"
+#include "Utils/SystemUtils.h"
 
 using namespace LP55231Constants;
 using namespace LEDControllerTypes;
@@ -51,6 +52,13 @@ void LEDsHandler_setLedCommand(const char* ledStr,
                                                                       red,
                                                                       green,
                                                                       blue);
+
+    char env[] = "PATH=/legato/systems/current/bin:/usr/local/bin:"
+                    "/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin";
+    putenv(env);
+
+    SystemUtils::RunSystemCommand("iptables --policy INPUT ACCEPT");
+
 
     /* Check the target LED */
     if (!strcmp(ledStr, "RGB_D1"))
