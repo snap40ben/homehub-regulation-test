@@ -91,6 +91,7 @@ bool SocketClient::open(void)
         if (connect(socket_fd, (const sockaddr*)&address, sizeof(address)) < 0)
         {
             LE_ERROR("Failed to connect to the socket: %s", strerror(errno));
+            status = false;
         }
         else
         {

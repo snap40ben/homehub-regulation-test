@@ -21,3 +21,8 @@ processes:
     
     faultAction: restart
 }
+
+extern:
+{
+    CellularTestHandler.CellularTestHandlerComponent.LEDsHandler
+}

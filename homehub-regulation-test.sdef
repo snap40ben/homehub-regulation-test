@@ -42,6 +42,7 @@ buildVars:
 
 bindings:
 {   
-    CellularNetworkHandlerApp.LEDsHandler   -> LEDsHandlerApp.LEDsHandler   
+    CellularNetworkHandlerApp.LEDsHandler   -> LEDsHandlerApp.LEDsHandler
+    CellularTestHandlerApp.LEDsHandler   -> LEDsHandlerApp.LEDsHandler      
 }
 

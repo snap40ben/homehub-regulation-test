@@ -19,6 +19,16 @@
 #define PING_HEADER_SIZE            (5)
 #define PING_FOOTER_SIZE            (3)
 
+static const std::string CONNECTIVITY_LED_NAME                  = "RGB_D1";
+static const std::string CONNECTIVITY_LED_CMD_CONNECTED         = "On";
+static const std::string CONNECTIVITY_LED_CMD_NOT_CONNECTED     = "On";
+static const uint8_t CONNECTIVITY_LED_RED_CONNECTED             = 0x00;
+static const uint8_t CONNECTIVITY_LED_GREEN_CONNECTED           = 0x30;
+static const uint8_t CONNECTIVITY_LED_BLUE_CONNECTED            = 0x00;
+static const uint8_t CONNECTIVITY_LED_RED_NOT_CONNECTED         = 0x30;
+static const uint8_t CONNECTIVITY_LED_GREEN_NOT_CONNECTED       = 0x30;
+static const uint8_t CONNECTIVITY_LED_BLUE_NOT_CONNECTED        = 0x00;
+
 /*!
  * @brief Main function of the WiFiServerHandler component
  * */
@@ -30,9 +40,13 @@ COMPONENT_INIT
 
     while (1)
     {
-        SocketClient socket(port, ipAddr, device);
+        LEDsHandler_setLedCommand(CONNECTIVITY_LED_NAME.c_str(),
+                                    CONNECTIVITY_LED_CMD_NOT_CONNECTED.c_str(),
+                                    CONNECTIVITY_LED_RED_NOT_CONNECTED,
+                                    CONNECTIVITY_LED_GREEN_NOT_CONNECTED,
+                                    CONNECTIVITY_LED_BLUE_NOT_CONNECTED);
 
-        sleep(1);
+        SocketClient socket(port, ipAddr, device);
 
         if(socket.open() == false)
         {
@@ -40,6 +54,13 @@ COMPONENT_INIT
             socket.close();
             continue;
         }
+
+        LEDsHandler_setLedCommand(CONNECTIVITY_LED_NAME.c_str(),
+                                    CONNECTIVITY_LED_CMD_CONNECTED.c_str(),
+                                    CONNECTIVITY_LED_RED_CONNECTED,
+                                    CONNECTIVITY_LED_GREEN_CONNECTED,
+                                    CONNECTIVITY_LED_BLUE_CONNECTED);
+
 
         std::vector<uint8_t> header(PING_HEADER_SIZE);
 

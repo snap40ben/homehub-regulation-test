@@ -1,3 +1,11 @@
+requires:
+{
+    api:
+    {
+        LEDsHandler = LEDsHandler.api
+    }
+}
+
 sources:
 {
     CellularTestHandler.cpp // COMPONENT_INIT
