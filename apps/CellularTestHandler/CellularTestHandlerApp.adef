@@ -1,0 +1,23 @@
+version: $HOMEHUB_FW_VERSION
+
+sandboxed: false
+
+executables:
+{
+    CellularTestHandler = ( CellularTestHandlerComponent )
+}
+
+processes:
+{
+    envVars:
+    {
+        LE_LOG_LEVEL = DEBUG
+    }
+
+    run:
+    {
+        (CellularTestHandler)
+    }
+    
+    faultAction: restart
+}

@@ -72,7 +72,6 @@ WearableDeviceCom::WearableDeviceCom (int port, in_addr_t addr, std::string devi
     if (serverStatus)
     {
         address.sin_family = AF_INET;
-        address.sin_addr.s_addr = addr;
         address.sin_port = htons(port);
 
         /* Attach the socket to the defined port */

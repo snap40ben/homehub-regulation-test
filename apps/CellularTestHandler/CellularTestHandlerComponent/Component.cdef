@@ -1,0 +1,6 @@
+sources:
+{
+    CellularTestHandler.cpp // COMPONENT_INIT
+    $SOURCE_PATH/Utils/SystemUtils.cpp
+    $SOURCE_PATH/Socket/SocketClient.cpp
+}
