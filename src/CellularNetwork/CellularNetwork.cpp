@@ -46,6 +46,8 @@ void CellularNetwork::open(void)
         le_mrc_SetRadioPower(LE_ON);
     }
 
+    sleep(5);
+
     le_mdc_ConState_t state = LE_MDC_DISCONNECTED;
     /* Check the state */
     LE_ASSERT(LE_OK ==

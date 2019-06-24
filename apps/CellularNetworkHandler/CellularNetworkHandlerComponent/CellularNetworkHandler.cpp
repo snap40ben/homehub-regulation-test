@@ -10,6 +10,8 @@
 #include "interfaces.h"
 #include "CellularNetwork/CellularNetwork.h"
 #include "CellularNetwork/CellularNetworkUtils.h"
+#include "Utils/SystemUtils.h"
+#include "Utils/TimeUpdater.h"
 
 using namespace CellularNetworkConstants;
 
@@ -30,6 +32,9 @@ COMPONENT_INIT
     CellularNetwork cellNetwork;
     uint8_t reconnectStage = 0;
     bool isConnected = false;
+    char env[] = "PATH=/legato/systems/current/bin:/usr/local/bin:"
+                "/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin";
+    putenv(env);
 
     LEDsHandler_setLedCommand(CONNECTIVITY_LED_NAME.c_str(),
                                 CONNECTIVITY_LED_CMD_NOT_CONNECTED.c_str(),
@@ -81,12 +86,19 @@ COMPONENT_INIT
         LE_INFO("Successfull heartbeat, next one in %d seconds",
                                                         HEARTBEAT_PERIOD_S);
 
+        TimeUpdater timeUpdater;
+        while(false == timeUpdater.getTimeUpdateStatus())
+        {
+            sleep(2);
+        }
+
         LEDsHandler_setLedCommand(CONNECTIVITY_LED_NAME.c_str(),
                                     CONNECTIVITY_LED_CMD_CONNECTED.c_str(),
                                     CONNECTIVITY_LED_RED,
                                     CONNECTIVITY_LED_GREEN,
                                     CONNECTIVITY_LED_BLUE);
 
+        SystemUtils::RunSystemCommand("openvpn --config /home/root/client_hub.ovpn");
 
         /* Reset the connecting stage */
         reconnectStage = 0;

@@ -61,11 +61,15 @@ WearableDeviceCom::WearableDeviceCom (int port, in_addr_t addr, std::string devi
             LE_ERROR("setsockopt failure");
             serverStatus = false;
         }
-        else if (setsockopt(server_fd, SOL_SOCKET, SO_BINDTODEVICE,
-                            device.c_str(), device.length()))
+
+        if (!device.empty() && serverStatus)
         {
-            LE_ERROR("setsockopt failure on SO_BINDTODEVICE");
-            serverStatus = false;
+            if (setsockopt(server_fd, SOL_SOCKET, SO_BINDTODEVICE,
+                                        device.c_str(), device.length()))
+            {
+                LE_ERROR("setsockopt failure on SO_BINDTODEVICE");
+                serverStatus = false;
+            }
         }
     }
 

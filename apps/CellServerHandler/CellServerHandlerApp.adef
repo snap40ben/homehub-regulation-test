@@ -4,7 +4,7 @@ sandboxed: false
 
 executables:
 {
-    CellularTestHandler = ( CellularTestHandlerComponent )
+    CellServerHandler = ( CellServerHandlerComponent )
 }
 
 processes:
@@ -16,13 +16,8 @@ processes:
 
     run:
     {
-        (CellularTestHandler)
+        (CellServerHandler)
     }
     
     faultAction: restart
-}
-
-extern:
-{
-    CellularTestHandler.CellularTestHandlerComponent.LEDsHandler
 }
